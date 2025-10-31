@@ -1,0 +1,916 @@
+body {
+  background-color: #F9FAFB;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.chat {
+  margin: auto;
+  height: 550px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width:100%;
+  padding-right: 7px;
+
+}
+
+/* ROW */
+.message-row {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message-row.me {
+  justify-content: flex-start;
+}
+
+.message-row.you {
+  justify-content: flex-end;
+}
+
+/* PROFILE PICTURE */
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 15px;
+  z-index: 100;
+  margin-bottom: -50px;
+}
+
+/* MESSAGE BUBBLE */
+.message-bubble {
+  position: relative;
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+}
+
+.name {
+  color: #878787;
+  margin-bottom: 5px;
+}
+
+/* ME BUBBLES */
+.me-bubble {
+  background-color: #26252A;
+  color: #fff;
+  border-radius: 20px;
+  padding: 12px 16px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+.me-bubble a{
+  background-color: #26252A;
+  color: #fff;
+}
+
+.me-bubble::before,
+.me-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+.me-bubble::before {
+  left: -7px;
+  width: 20px;
+  height: 20px;
+  background-color: #26252A;
+  border-bottom-right-radius: 12px;
+}
+
+.me-bubble::after {
+  left: -26px;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-bottom-right-radius: 12px;
+}
+
+/* YOU BUBBLES */
+/* TUĐE poruke - plave */ 
+.you-bubble { 
+  background-color: #278EFF; 
+  color: #ffffff; 
+  border-radius: 20px; 
+  padding: 12px 16px;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 40px;
+  margin-bottom:0;
+} 
+.you-bubble::before { 
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  right: -7px; 
+  width: 20px; 
+  height: 20px; 
+  background-color: #278EFF; 
+  border-bottom-left-radius: 12px; 
+} 
+.you-bubble::after { 
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  right: -26px; 
+  width: 26px; 
+  height: 26px; 
+  background-color: white; 
+  border-bottom-left-radius: 12px;
+}
+
+/* NO TAIL */
+.no-tail::before,
+.no-tail::after {
+  display: none;
+}
+.first-message {
+  margin-left:115px;
+  margin-bottom:5px;
+}
+
+.name {
+  padding-left:20px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+
+}
+/* NAVBAR */
+.navbar {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F9FAFB;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  padding: 20px 80px;
+  position: relative;
+  margin:auto;
+}
+.hamburger {
+  display: none;
+  color: #26252A;
+}
+/* Levo — Logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Centar — Navigacija */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link-main {
+  text-decoration: none;
+  color: #26252A;
+  font-size: 30px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link-second {
+  text-decoration: none;
+  color: #878787;
+  font-size: 30px;
+  font-weight: 200;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link-second:hover {
+  color: #26252A;
+}
+
+/* Desno — Ikonice */
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icon {
+  font-size: 30px;
+  color: #878787;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-icon:hover {
+  color: #26252A;
+  transform: scale(1.1);
+}
+
+/*Toggle*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+    width:100%;
+}
+.MyWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;
+  width:80%;
+  margin: auto;
+}
+.MyWork h1 {
+  font-size: 70px;
+  color: #26252A;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  background-color: #26252a;
+  border-radius: 30px;
+  width: 280px;
+  height: 50px;
+  overflow: hidden;
+}
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #26252A; /* tvoja zelena */
+  margin: 40px auto; /* razmak iznad i ispod */
+  width: 80%; /* širina linije */
+}
+
+.divider2 {
+  border: none;
+  height: 1px;
+  background-color: #26252A; /* tvoja zelena */
+  margin: 90px auto 40px auto; /* razmak iznad i ispod */
+  width: 80%; /* širina linije */
+}
+
+
+
+.toggle-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn.active {
+  color: #ffffff;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 4px;
+  width: 145px;
+  height: 42px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Zelena boja kada je development aktivan */
+.toggle-slider.green {
+  background-color: #2fcc59;
+  width: 140px;
+  margin-left:-15px;
+}
+.toggle-slider.blue {
+  background-color: #278EFF;
+  width:130px;
+}
+
+
+/* Početna pozicija: DESIGN levo */
+.toggle-slider.left {
+  left: 4px;
+}
+
+/* DEVELOPMENT desno */
+.toggle-slider.right {
+  left: 150px;
+}
+
+.content {
+  margin-top: 0px;
+  text-align: center;
+  color: #fff;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 16px;
+  width: 60%;
+  max-width: 600px;
+}
+
+.content-box h2 {
+  margin-bottom: 10px;
+  color: #2fcc59;
+}
+
+.content-box p {
+  color: #ccc;
+}
+
+/*My work design*/
+.message-bubble p {
+  margin:0;
+}
+.message-bubble b {
+font-weight: 500;
+}
+.container .mywork {
+margin-top: 0;
+}
+.chat-mywork {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.you-bubble-work:first-child { 
+  margin-top: 0px;
+}
+.you-bubble-work { 
+  background-color: #278EFF; 
+  color: #ffffff; 
+  border-radius: 20px; 
+  padding: 12px 16px;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 40px;
+  margin-bottom:0;
+} 
+.you-bubble-work::before { 
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  right: -7px; 
+  width: 20px; 
+  height: 20px; 
+  background-color: #278EFF; 
+  border-bottom-left-radius: 12px; 
+} 
+.you-bubble-work::after { 
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  right: -26px; 
+  width: 26px; 
+  height: 26px; 
+  background-color: white; 
+  border-bottom-left-radius: 12px;
+}
+.me-bubble-img-1 {  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/citybudy.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center; 
+  transition: all 0.2s ease;
+
+}
+.me-bubble-img-2 {  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/pureskin.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center; 
+  transition: all 0.2s ease;
+
+}
+.me-bubble-img-3 {  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/ahilej.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center;
+    transition: all 0.2s ease;
+}
+.you-bubble-green:first-child { 
+  margin-top: 0px;
+} 
+
+.you-bubble.green { 
+    background-color: #2fcc59; 
+}
+.you-bubble-green { 
+  background-color: #2fcc59; 
+  color: #ffffff; 
+  border-radius: 20px; 
+  padding: 12px 16px;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 40px;
+
+}
+.you-bubble-green::before,
+.you-bubble.green::Before { 
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  right: -7px; 
+  width: 20px; 
+  height: 20px; 
+  background-color: #2fcc59; 
+  border-bottom-left-radius: 12px; 
+} 
+.you-bubble-green::after { 
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  right: -26px; 
+  width: 26px; 
+  height: 26px; 
+  background-color: white; 
+  border-bottom-left-radius: 12px;
+}
+.me-bubble-img-4 {  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/t-shows.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center; 
+    transition: all 0.2s ease;
+
+}
+.me-bubble-img-5{  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/beats.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center; 
+    transition: all 0.2s ease;
+
+}
+.me-bubble-img-6{  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/mymovie.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center; 
+    transition: all 0.2s ease;
+
+}
+.me-bubble-img-7{  
+  width: 350px;
+  background-color: #26252A;
+  border-radius: 20px;
+  height: 210px;
+   background-image: url('img/fleet.png');
+  background-repeat: no-repeat;      /* sprečava ponavljanje slike */
+  background-size: cover;           /* slika se rasteže da pokrije ceo div */
+  background-position: center; 
+    transition: all 0.2s ease;
+
+}
+.me-bubble-img-1:hover,
+.me-bubble-img-2:hover,
+.me-bubble-img-3:hover,
+.me-bubble-img-4:hover,
+.me-bubble-img-5:hover,
+.me-bubble-img-6:hover,
+.me-bubble-img-7:hover { 
+  opacity: 0.7;
+}
+
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin:auto;
+ background-color: #f9f9f9;
+  color: #1e1e1e;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding-bottom: 40px;
+}
+
+.footer-left img.footer-logo {
+  width: 50px;
+  height: auto;
+}
+
+.footer-right {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.footer-column a:hover {
+  opacity: 0.6;
+}
+/* ============================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ============================= */
+
+/* TABLET (768px – 1024px) */
+@media (max-width: 1024px) {
+  /* Navbar */
+  .navbar {
+    width: 90%;
+    padding: 15px 40px;
+  }
+
+  .navbar-center {
+    gap: 25px;
+  }
+
+  .nav-link-main,
+  .nav-link-second {
+    font-size: 22px;
+  }
+
+  .nav-icon {
+    font-size: 24px;
+  }
+
+  /* Chat */
+  .chat,
+  .chat-mywork {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+  .chat {
+  margin: auto;
+  height: 450px;
+}
+.MyWork {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+  .profile-pic {
+    width: 70px;
+    height: 70px;
+    margin-bottom: -40px;
+
+  }
+
+  .me-bubble,
+  .you-bubble,
+  .you-bubble-green,
+  .you-bubble-work {
+    font-size: 18px;
+  }
+.first-message {
+  margin-left: 85px;
+  margin-bottom:5px;
+}
+  .me-bubble-img-1,
+  .me-bubble-img-2,
+  .me-bubble-img-3,
+  .me-bubble-img-4,
+  .me-bubble-img-5,
+  .me-bubble-img-6,
+  .me-bubble-img-7 {
+    width: 280px;
+    height: 170px;
+  }
+
+  /* Footer */
+  .footer {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-column h4 {
+    font-size: 13px;
+  }
+
+  .footer-column a {
+    font-size: 13px;
+  }
+.divider {
+  margin: 10px auto; /* razmak iznad i ispod */
+  width: 90%; /* širina linije */
+}
+.divider2 {
+  margin-top: 40px; /* razmak iznad i ispod */
+  width: 90%; /* širina linije */
+}
+  /* Toggle */
+  .MyWork h1 {
+    font-size: 50px;
+  }
+
+  .toggle {
+    width: 240px;
+    height: 45px;
+  }
+
+  .toggle-btn {
+    font-size: 12px;
+  }
+
+  .toggle-slider {
+    width: 120px;
+    height: 38px;
+  }
+  .toggle-slider.green {
+  background-color: #2fcc59;
+  width: 120px;
+  margin-left:-5px;
+}
+.toggle-slider.blue {
+  background-color: #278EFF;
+  width:110px;
+}
+
+  .toggle-slider.right {
+    left: 120px;
+  }
+
+  .content {
+    width: 80%;
+  }
+}
+
+/* MOBILE (do 767px) */
+@media (max-width: 767px) {
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .navbar-left {
+    display: relative;
+    top: 0;
+    left: 0;
+  }
+  .navbar-left .navbar-logo {
+    width: 40px;
+    height: auto;
+  }
+
+  .navbar-center {
+    position: static;
+    transform: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-link-main,
+  .nav-link-second {
+    font-size: 18px;
+  }
+
+  .nav-icon {
+    font-size: 22px;
+  }
+
+  /* Chat */
+  .chat {
+    width: 90%;
+    flex-direction: column;
+    margin: auto;
+    height: 90vh;
+  }
+.chat-mywork {
+    width: 90%;
+    height: auto;
+}
+  .message-bubble {
+    max-width: 70%;
+    font-size: 18px;
+  }
+  .first-message {
+  margin-left: 75px;
+  margin-bottom:5px;
+}
+  .me-bubble-img-1,
+  .me-bubble-img-2,
+  .me-bubble-img-3,
+  .me-bubble-img-4,
+  .me-bubble-img-5,
+  .me-bubble-img-6,
+  .me-bubble-img-7 {
+    width: 200px;
+    height: 110px;
+  }
+
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    margin-bottom: -30px;
+  }
+
+  /* Toggle */
+  .MyWork {
+    width: 95%;
+  }
+
+  .MyWork h1 {
+    font-size: 40px;
+    margin-top: 50px;
+
+  }
+
+  .toggle {
+    width: 200px;
+    height: 40px;
+  }
+
+  .toggle-btn {
+    font-size: 11px;
+  }
+
+  .toggle-slider {
+    width: 100px;
+    height: 30px;
+  }
+.toggle-slider.green {
+  background-color: #2fcc59;
+  width: 98px;
+  margin-left: -2px;
+}
+.toggle-slider.blue {
+  background-color: #278EFF;
+  width:90px;
+}
+  .toggle-slider.right {
+    left: 100px;
+  }
+
+  .content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    padding-top: 0;
+  }
+
+  .footer-left img.footer-logo {
+    width: 30px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-column h4 {
+    font-size: 12px;
+  }
+
+  .footer-column a {
+    font-size: 12px;
+  }
+  .name {
+    font-size: 16px;
+      padding-left:15px;
+  }
+}
+/* =============================== */
+/* 📱 MOBILE HAMBURGER NAVBAR */
+/* =============================== */
+@media (max-width: 767px) {
+  .hamburger {
+    position: absolute;
+    right: 55px;
+    top: 100%;
+    transform: translateY(-50px); /* −5px ispod nav-a */
+    font-size: 28px;
+    color: #26252A;
+    cursor: pointer;
+    z-index: 300;
+    display: flex;
+  }
+
+  /* Zatvoreno stanje */
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+
+  /* Otvoreno stanje */
+  .navbar.open .navbar-center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #F9FAFB;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    animation: slideDown 0.5s ease forwards;
+  }
+.navbar.open .navbar-right {
+    display: flex;
+    width: 100%;
+    background-color: #F9FAFB;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    animation: slideDown 0.5s ease forwards;
+  }
+
+  /* Animacija spuštanja */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
