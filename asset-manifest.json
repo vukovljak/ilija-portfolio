@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ilija-portfolio/static/css/main.1e8dd4c0.css",
+    "main.css": "/ilija-portfolio/static/css/main.3bd86fff.css",
     "main.js": "/ilija-portfolio/static/js/main.d684632c.js",
     "static/js/453.3238785c.chunk.js": "/ilija-portfolio/static/js/453.3238785c.chunk.js",
     "static/media/main-img.png": "/ilija-portfolio/static/media/main-img.c6219c74ea0c15c1c264.png",
@@ -13,12 +13,12 @@
     "static/media/citybudy.png": "/ilija-portfolio/static/media/citybudy.7087802623de9fa5a07b.png",
     "static/media/beats.png": "/ilija-portfolio/static/media/beats.707acd1ad2d16da071b1.png",
     "index.html": "/ilija-portfolio/index.html",
-    "main.1e8dd4c0.css.map": "/ilija-portfolio/static/css/main.1e8dd4c0.css.map",
+    "main.3bd86fff.css.map": "/ilija-portfolio/static/css/main.3bd86fff.css.map",
     "main.d684632c.js.map": "/ilija-portfolio/static/js/main.d684632c.js.map",
     "453.3238785c.chunk.js.map": "/ilija-portfolio/static/js/453.3238785c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e8dd4c0.css",
+    "static/css/main.3bd86fff.css",
     "static/js/main.d684632c.js"
   ]
 }
