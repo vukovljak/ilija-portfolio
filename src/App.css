@@ -886,15 +886,19 @@ margin-top: 0;
   /* Otvoreno stanje */
   .navbar.open .navbar-center {
     display: flex;
+    margin-left:-20px;
     flex-direction: column;
     width: 100%;
     background-color: #F9FAFB;
+    border-top: 1px solid #ccc;
+
     border-bottom: 1px solid #ccc;
     padding: 20px 0;
     animation: slideDown 0.5s ease forwards;
   }
 .navbar.open .navbar-right {
     display: flex;
+    margin-left:-20px;
     width: 100%;
     background-color: #F9FAFB;
     border-bottom: 1px solid #ccc;
