@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ilija-portfolio/static/css/main.3fa624ce.css",
-    "main.js": "/ilija-portfolio/static/js/main.5d5fc764.js",
+    "main.js": "/ilija-portfolio/static/js/main.d684632c.js",
     "static/js/453.3238785c.chunk.js": "/ilija-portfolio/static/js/453.3238785c.chunk.js",
     "static/media/main-img.png": "/ilija-portfolio/static/media/main-img.c6219c74ea0c15c1c264.png",
     "static/media/fleet.png": "/ilija-portfolio/static/media/fleet.5d504de9f0ac3c5b9a91.png",
@@ -14,11 +14,11 @@
     "static/media/beats.png": "/ilija-portfolio/static/media/beats.707acd1ad2d16da071b1.png",
     "index.html": "/ilija-portfolio/index.html",
     "main.3fa624ce.css.map": "/ilija-portfolio/static/css/main.3fa624ce.css.map",
-    "main.5d5fc764.js.map": "/ilija-portfolio/static/js/main.5d5fc764.js.map",
+    "main.d684632c.js.map": "/ilija-portfolio/static/js/main.d684632c.js.map",
     "453.3238785c.chunk.js.map": "/ilija-portfolio/static/js/453.3238785c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3fa624ce.css",
-    "static/js/main.5d5fc764.js"
+    "static/js/main.d684632c.js"
   ]
 }
